@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hitomi_Viewer.Viewer.ViewModels
 {
-    internal class ViewerViewModel
-    {
-    }
+	internal class ScrollViewerViewModel
+	{
+	}
 }

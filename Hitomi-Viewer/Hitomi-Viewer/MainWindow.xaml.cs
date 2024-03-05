@@ -28,6 +28,14 @@ namespace Hitomi_Viewer
 
             mViewModel = new MainVIewModel();
             DataContext = mViewModel;
-        }
-    }
+
+			Frame.Navigate(App.BrowserPage);
+
+		}
+
+		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			App.Dispose();
+		}
+	}
 }

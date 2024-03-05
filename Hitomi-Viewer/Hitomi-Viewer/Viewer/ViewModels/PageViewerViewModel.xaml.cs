@@ -12,16 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Hitomi_Viewer.Viewer.Views
+namespace Hitomi_Viewer.Viewer.ViewModels
 {
-    /// <summary>
-    /// Interaction logic for ViewerWindow.xaml
-    /// </summary>
-    public partial class ViewerWindow : Window
-    {
-        public ViewerWindow()
-        {
-            InitializeComponent();
-        }
-    }
+	/// <summary>
+	/// Interaction logic for PageViewerViewModel.xaml
+	/// </summary>
+	public partial class PageViewerViewModel : Window
+	{
+		public PageViewerViewModel()
+		{
+			InitializeComponent();
+		}
+	}
 }

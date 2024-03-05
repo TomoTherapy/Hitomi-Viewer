@@ -9,15 +9,23 @@ namespace Hitomi_Viewer
     {
         public static Browser.Views.BrowserPage BrowserPage;
         public static Preferences.Views.PreferencesPage PreferencesPage;
-        public static Viewer.Views.ViewerWindow ViewerWindow;
-        public static Services.JsonParser JsonParser;
+        public static Viewer.Views.PageViewerWindow PageViewerWindow;
+		public static Viewer.Views.ScrollViewerWindow ScrollViewerWindow;
+		public static Services.JsonParser JsonParser;
 
         public App()
         {
             BrowserPage = new Browser.Views.BrowserPage();
             PreferencesPage = new Preferences.Views.PreferencesPage();
-            ViewerWindow = new Viewer.Views.ViewerWindow();
-            JsonParser = new Services.JsonParser();
+			PageViewerWindow = new Viewer.Views.PageViewerWindow();
+			ScrollViewerWindow = new Viewer.Views.ScrollViewerWindow();
+			JsonParser = new Services.JsonParser();
         }
+
+		public static void Dispose()
+		{
+			PageViewerWindow.Close();
+			ScrollViewerWindow.Close();
+		}
     }
 }

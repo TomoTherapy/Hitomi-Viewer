@@ -8,5 +8,10 @@ namespace Hitomi_Viewer
 {
     internal class MainVIewModel
     {
+
+		public MainVIewModel()
+		{
+
+		}
     }
 }

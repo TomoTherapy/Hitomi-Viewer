@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hitomi_Viewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="163*"/>
@@ -15,6 +15,7 @@
             <RowDefinition Height="22*"/>
             <RowDefinition Height="195*"/>
         </Grid.RowDefinitions>
+		<Frame Name="Frame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 
-    </Grid>
+	</Grid>
 </Window>
