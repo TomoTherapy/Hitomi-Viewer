@@ -12,7 +12,6 @@
 	<Grid Background="Azure">
 		<service:TileViewUserControl x:Name="TileView" Margin="10,10,0,0" Height="368" VerticalAlignment="Top" HorizontalAlignment="Left" Width="330"/>
 		<WrapPanel Height="370" VerticalAlignment="Top" Margin="376,21,10,0" Background="AliceBlue">
-			<WrapPanel.
 		</WrapPanel>
 	</Grid>
 </Page>
