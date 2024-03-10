@@ -14,14 +14,14 @@ using System.Windows.Shapes;
 
 namespace Hitomi_Viewer.Viewer.Views
 {
-	/// <summary>
-	/// Interaction logic for PageViewerWindow.xaml
-	/// </summary>
-	public partial class PageViewerWindow : Window
-	{
-		public PageViewerWindow()
-		{
-			InitializeComponent();
-		}
-	}
+    /// <summary>
+    /// Interaction logic for ViewerWindow.xaml
+    /// </summary>
+    public partial class ViewerWindow : Window
+    {
+        public ViewerWindow()
+        {
+            InitializeComponent();
+        }
+    }
 }

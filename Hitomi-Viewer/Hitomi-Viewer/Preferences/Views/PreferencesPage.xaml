@@ -9,6 +9,7 @@
       Title="PreferencesPage">
 
     <Grid>
-        
+        <Label Content="Preferences PAGE!!" HorizontalAlignment="Left" Margin="259,172,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Page>

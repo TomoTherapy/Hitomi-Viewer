@@ -44,7 +44,7 @@ namespace Hitomi_Viewer.Browser.Views
 				mData.Add(new Datum());
 			}
 
-			TileView.Items = mData;
+			//TileView.Items = mData;
 		}
     }
 

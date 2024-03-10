@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using Hitomi_Viewer.Browser.Views;
+using Hitomi_Viewer.Viewer.Views;
+using System.Windows;
 
 namespace Hitomi_Viewer
 {
@@ -7,25 +9,39 @@ namespace Hitomi_Viewer
     /// </summary>
     public partial class App : Application
     {
-        public static Browser.Views.BrowserPage BrowserPage;
+        // browser
+        public static BrowserPage BrowserPage;
+        public static ListBrowserUserControl ListBrowserUserControl;
+        public static TileBrowserUserControl TileBrowserUserControl;
+
+        // viewer
+        public static Viewer.Views.ViewerWindow ViewerWindow;
+		public static Viewer.Views.ScrollViewerUserControl ScrollViewerUserControl;
+        public static Viewer.Views.PageViewerUserControl PageViewerUserControl;
+
+        // preferences
         public static Preferences.Views.PreferencesPage PreferencesPage;
-        public static Viewer.Views.PageViewerWindow PageViewerWindow;
-		public static Viewer.Views.ScrollViewerWindow ScrollViewerWindow;
+
+        // etc
 		public static Services.JsonParser JsonParser;
 
         public App()
         {
-            BrowserPage = new Browser.Views.BrowserPage();
+            BrowserPage = new BrowserPage();
+            ListBrowserUserControl = new ListBrowserUserControl();
+            TileBrowserUserControl = new TileBrowserUserControl();
+
+            ViewerWindow = new Viewer.Views.ViewerWindow();
+            ScrollViewerUserControl = new ScrollViewerUserControl();
+            PageViewerUserControl = new PageViewerUserControl();
+
             PreferencesPage = new Preferences.Views.PreferencesPage();
-			PageViewerWindow = new Viewer.Views.PageViewerWindow();
-			ScrollViewerWindow = new Viewer.Views.ScrollViewerWindow();
 			JsonParser = new Services.JsonParser();
         }
 
 		public static void Dispose()
 		{
-			PageViewerWindow.Close();
-			ScrollViewerWindow.Close();
+			ViewerWindow.Close();
 		}
     }
 }

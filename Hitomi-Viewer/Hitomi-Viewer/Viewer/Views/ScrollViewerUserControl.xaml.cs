@@ -10,18 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Hitomi_Viewer.Viewer.Views
 {
-	/// <summary>
-	/// Interaction logic for ScrollViewerWindow.xaml
-	/// </summary>
-	public partial class ScrollViewerWindow : Window
-	{
-		public ScrollViewerWindow()
-		{
-			InitializeComponent();
-		}
-	}
+    /// <summary>
+    /// Interaction logic for ScrollViewerUserControl.xaml
+    /// </summary>
+    public partial class ScrollViewerUserControl : UserControl
+    {
+        public ScrollViewerUserControl()
+        {
+            InitializeComponent();
+        }
+    }
 }

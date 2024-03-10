@@ -29,7 +29,7 @@ namespace Hitomi_Viewer
             mViewModel = new MainVIewModel();
             DataContext = mViewModel;
 
-			Frame.Navigate(App.BrowserPage);
+			MainFrame.Navigate(App.BrowserPage);
 
 		}
 
@@ -37,5 +37,20 @@ namespace Hitomi_Viewer
 		{
 			App.Dispose();
 		}
-	}
+
+        private void TileViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(App.BrowserPage);
+        }
+
+        private void ListViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(App.BrowserPage);
+        }
+
+        private void PreferencesButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(App.PreferencesPage);
+        }
+    }
 }

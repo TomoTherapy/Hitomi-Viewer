@@ -5,17 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hitomi_Viewer"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="163*"/>
-            <ColumnDefinition Width="37*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="22*"/>
-            <RowDefinition Height="195*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-		<Frame Name="Frame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Grid>
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Width="50" Height="25"/>
+                <Button Width="50" Height="25"/>
+                <Button Width="50" Height="25"/>
+            </StackPanel>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="TileViewButton" Content="Button" Margin="10" Click="TileViewButton_Click"/>
+            <Button x:Name="ListViewButton" Content="Button" Margin="10" Click="ListViewButton_Click"/>
+            <Button x:Name="PreferencesButton" Content="Button" Margin="10" Click="PreferencesButton_Click"/>
+        </StackPanel>
+        <Frame Name="MainFrame" Grid.Row="2" NavigationUIVisibility="Hidden"/>
 
-	</Grid>
+    </Grid>
 </Window>

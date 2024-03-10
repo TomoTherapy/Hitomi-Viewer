@@ -15,27 +15,6 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x64\Debug\</OutputPath>
@@ -83,9 +62,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Browser\Models\BrowserModel.cs" />
     <Compile Include="Browser\ViewModels\BrowserViewModel.cs" />
+    <Compile Include="Browser\ViewModels\ListBrowserViewModel.cs" />
+    <Compile Include="Browser\ViewModels\TileBrowserViewModel.cs" />
     <Compile Include="Browser\Views\BrowserPage.xaml.cs">
       <DependentUpon>BrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\Views\ListBrowserUserControl.xaml.cs">
+      <DependentUpon>ListBrowserUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Browser\Views\TileBrowserUserControl.xaml.cs">
+      <DependentUpon>TileBrowserUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainVIewModel.cs" />
     <Compile Include="Preferences\ViewModels\PreferencesViewModel.cs" />
@@ -96,20 +84,26 @@
       <DependentUpon>AutoClosingMessageBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\JsonParser.cs" />
-    <Compile Include="Services\TileViewUserControl.xaml.cs">
-      <DependentUpon>TileViewUserControl.xaml</DependentUpon>
+    <Compile Include="Viewer\ViewModels\PageViewerViewModel.cs" />
+    <Compile Include="Viewer\Views\PageViewerUserControl.xaml.cs">
+      <DependentUpon>PageViewerUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Viewer\ViewModels\PageViewerViewModel.xaml.cs">
-      <DependentUpon>PageViewerViewModel.xaml</DependentUpon>
+    <Compile Include="Viewer\Views\ScrollViewerUserControl.xaml.cs">
+      <DependentUpon>ScrollViewerUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\Views\ViewerWindow.xaml.cs">
+      <DependentUpon>ViewerWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Viewer\ViewModels\ScrollViewerViewModel.cs" />
-    <Compile Include="Viewer\Views\PageViewerWindow.xaml.cs">
-      <DependentUpon>PageViewerWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Viewer\Views\ScrollViewerWindow.xaml.cs">
-      <DependentUpon>ScrollViewerWindow.xaml</DependentUpon>
-    </Compile>
     <Page Include="Browser\Views\BrowserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Browser\Views\ListBrowserUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Browser\Views\TileBrowserUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -135,10 +129,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Services\TileViewUserControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Styles\ControlStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,15 +141,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Viewer\ViewModels\PageViewerViewModel.xaml">
+    <Page Include="Viewer\Views\PageViewerUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Viewer\Views\PageViewerWindow.xaml">
+    <Page Include="Viewer\Views\ScrollViewerUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Viewer\Views\ScrollViewerWindow.xaml">
+    <Page Include="Viewer\Views\ViewerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

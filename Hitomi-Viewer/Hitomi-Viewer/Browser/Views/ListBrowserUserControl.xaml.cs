@@ -10,18 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Hitomi_Viewer.Viewer.ViewModels
+namespace Hitomi_Viewer.Browser.Views
 {
-	/// <summary>
-	/// Interaction logic for PageViewerViewModel.xaml
-	/// </summary>
-	public partial class PageViewerViewModel : Window
-	{
-		public PageViewerViewModel()
-		{
-			InitializeComponent();
-		}
-	}
+    /// <summary>
+    /// Interaction logic for ListBrowserUserControl.xaml
+    /// </summary>
+    public partial class ListBrowserUserControl : UserControl
+    {
+        public ListBrowserUserControl()
+        {
+            InitializeComponent();
+        }
+    }
 }
