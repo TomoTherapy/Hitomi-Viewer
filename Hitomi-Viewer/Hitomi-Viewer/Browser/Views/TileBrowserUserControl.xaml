@@ -4,9 +4,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Hitomi_Viewer.Browser.Views"
+             xmlns:local2="clr-namespace:Hitomi_Viewer.Cores.CustomControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <ScrollViewer>
+            <WrapPanel Background="White" >
+                <Border Width="200" Height="350" Margin="10,5" BorderThickness="1" CornerRadius="5" Background="#FFFFF7DF" BorderBrush="Gray">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+                        <Grid >
+                            <Grid.Clip>
+                                <!-- RectangleGeometry to clip the content of the Grid -->
+                                <RectangleGeometry Rect="0,0,198,300" RadiusX="5" RadiusY="5"/>
+                            </Grid.Clip>
+                            <Image RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/SampleImages/001.jpg" Stretch="UniformToFill" />
+                        </Grid>
+                        <TextBlock Text="TITLE" Grid.Row="1" ToolTip="TITLE"/>
+                        <TextBlock Text="AUTHOR" Grid.Row="2"  ToolTip="TITLE"/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="3">
+                            <TextBlock Text="54211234"  Margin="10,0"/>
+                            <TextBlock Text="p125" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+            </WrapPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

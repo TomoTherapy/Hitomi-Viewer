@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:Hitomi_Viewer"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--<Style TargetType="TextBlock" x:Key="TileViewTextStyle">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#FF212121"/>
+        </Style>-->
     </Application.Resources>
 </Application>

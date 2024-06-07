@@ -75,6 +75,15 @@
     <Compile Include="Browser\Views\TileBrowserUserControl.xaml.cs">
       <DependentUpon>TileBrowserUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Cores\CustomControls\PreviewUserControl.xaml.cs">
+      <DependentUpon>PreviewUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cores\CustomControls\PreviewWindow.xaml.cs">
+      <DependentUpon>PreviewWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cores\CustomControls\TileUserControl.xaml.cs">
+      <DependentUpon>TileUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainVIewModel.cs" />
     <Compile Include="Preferences\ViewModels\PreferencesViewModel.cs" />
     <Compile Include="Preferences\Views\PreferencesPage.xaml.cs">
@@ -107,6 +116,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Cores\CustomControls\PreviewUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cores\CustomControls\PreviewWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cores\CustomControls\TileUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -129,15 +150,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\ControlStyles.xaml">
+    <Page Include="Resources\Styles\ControlStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\DarkTheme.xaml">
+    <Page Include="Resources\Styles\DarkTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Styles\LightTheme.xaml">
+    <Page Include="Resources\Styles\LightTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,6 +204,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Preferences\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SampleImages\01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\SampleImages\001.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

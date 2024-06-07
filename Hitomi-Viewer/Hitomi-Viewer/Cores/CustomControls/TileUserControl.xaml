@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Hitomi_Viewer.Cores.CustomControls.TileUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hitomi_Viewer.Cores.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="369" d:DesignWidth="220">
+    <Border Width="200" Height="350" Margin="10,5" BorderThickness="1" CornerRadius="5" Background="#FFFFF7DF" BorderBrush="Gray">
+        <Grid MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <Grid >
+                <Grid.Clip>
+                    <!-- RectangleGeometry to clip the content of the Grid -->
+                    <RectangleGeometry Rect="0,0,198,300" RadiusX="5" RadiusY="5"/>
+                </Grid.Clip>
+                <Image Name="Cover_Image" RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/SampleImages/01.jpg" Stretch="UniformToFill" />
+            </Grid>
+            <TextBlock Name="Title_TextBlock" Text="TITLE" Grid.Row="1"  ToolTip="TITLE"/>
+            <TextBlock Name="Author_TextBlock" Text="AUTHOR" Grid.Row="2"  ToolTip="TITLE"/>
+            <StackPanel Orientation="Horizontal" Grid.Row="3">
+                <TextBlock Name="Number_TextBlock" Text="54211234" Margin="10,0"/>
+                <TextBlock Name="Pages_TextBlock" Text="p125" />
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
