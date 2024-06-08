@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hitomi_Viewer.Browser.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,9 +30,10 @@ namespace Hitomi_Viewer
             mViewModel = new MainVIewModel();
             DataContext = mViewModel;
 
-			MainFrame.Navigate(App.BrowserPage);
+            //MainFrame.Navigate(App.BrowserPage);
+            BrowserGrid.Children.Add(App.TileBrowserUserControl);
 
-		}
+        }
 
 		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
 		{
@@ -40,17 +42,27 @@ namespace Hitomi_Viewer
 
         private void TileViewButton_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(App.BrowserPage);
+            //MainFrame.Navigate(App.BrowserPage);
+
+            SwapUserControl(App.TileBrowserUserControl);
         }
 
         private void ListViewButton_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(App.BrowserPage);
+            //MainFrame.Navigate(App.BrowserPage);
+
+            SwapUserControl(App.ListBrowserUserControl);
         }
 
         private void PreferencesButton_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(App.PreferencesPage);
+            //MainFrame.Navigate(App.PreferencesPage);
+        }
+
+        private void SwapUserControl(UserControl control)
+        {
+            BrowserGrid.Children.Clear();
+            BrowserGrid.Children.Add(control);
         }
     }
 }

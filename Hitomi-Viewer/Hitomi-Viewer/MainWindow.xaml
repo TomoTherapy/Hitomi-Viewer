@@ -5,27 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hitomi_Viewer"
         mc:Ignorable="d"
-        WindowStyle="None"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+        Title="MainWindow" Height="700" Width="1000" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid>
-            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                <Button Width="50" Height="25"/>
-                <Button Width="50" Height="25"/>
-                <Button Width="50" Height="25"/>
-            </StackPanel>
-        </Grid>
-        <StackPanel Orientation="Horizontal" Grid.Row="1">
-            <Button x:Name="TileViewButton" Content="Button" Margin="10" Click="TileViewButton_Click"/>
-            <Button x:Name="ListViewButton" Content="Button" Margin="10" Click="ListViewButton_Click"/>
-            <Button x:Name="PreferencesButton" Content="Button" Margin="10" Click="PreferencesButton_Click"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button Style="{DynamicResource NaviButtonTemplate}" x:Name="TileViewButton" Click="TileViewButton_Click" ToolTip="Tile View">
+                <Canvas Width="36" Height="36">
+                    <Rectangle Stroke="DimGray" StrokeThickness="3" Width="15" Height="15" RadiusX="2" RadiusY="2" Margin="2"/>
+                    <Rectangle Stroke="DimGray" StrokeThickness="3" Width="15" Height="15" RadiusX="2" RadiusY="2" Margin="19,2,0,0"/>
+                    <Rectangle Stroke="DimGray" StrokeThickness="3" Width="15" Height="15" RadiusX="2" RadiusY="2" Margin="2,19,0,0"/>
+                    <Rectangle Stroke="DimGray" StrokeThickness="3" Width="15" Height="15" RadiusX="2" RadiusY="2" Margin="19,19,0,0"/>
+                </Canvas>
+            </Button>
+            <Button Style="{DynamicResource NaviButtonTemplate}" x:Name="ListViewButton" Click="ListViewButton_Click" ToolTip="List View">
+                <Canvas Width="36" Height="36">
+                    <Rectangle Stroke="DimGray" StrokeThickness="3" Width="13" Height="15" RadiusX="2" RadiusY="2" Margin="2"/>
+                    <Rectangle Stroke="DimGray" StrokeThickness="3" Width="13" Height="15" RadiusX="2" RadiusY="2" Margin="2,19,0,0"/>
+                    <Line X1="18" Y1="7" X2="31" Y2="7" Stroke="DimGray" StrokeThickness="3"/>
+                    <Line X1="18" Y1="13" X2="34" Y2="13" Stroke="DimGray" StrokeThickness="3"/>
+                    <Line X1="18" Y1="24" X2="31" Y2="24" Stroke="DimGray" StrokeThickness="3"/>
+                    <Line X1="18" Y1="30" X2="34" Y2="30" Stroke="DimGray" StrokeThickness="3"/>
+                </Canvas>
+            </Button>
+            <Button Style="{DynamicResource NaviButtonTemplate}" x:Name="PreferencesButton" Click="PreferencesButton_Click" ToolTip="Preferences">
+                <Canvas Width="28" Height="28">
+                    <Rectangle Width="20" Height="20" Fill="Red"/>
+                    <Rectangle Stroke="BlueViolet" StrokeThickness="1" Width="24" Height="24" RadiusX="5" RadiusY="5" Margin="2"/>
+                </Canvas>
+            </Button>
         </StackPanel>
-        <Frame Name="MainFrame" Grid.Row="2" NavigationUIVisibility="Hidden"/>
-
+        <Grid Name="BrowserGrid" Grid.Row="1"/>
     </Grid>
 </Window>

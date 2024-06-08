@@ -10,7 +10,7 @@ namespace Hitomi_Viewer
     public partial class App : Application
     {
         // browser
-        public static BrowserPage BrowserPage;
+        //public static BrowserPage BrowserPage;
         public static ListBrowserUserControl ListBrowserUserControl;
         public static TileBrowserUserControl TileBrowserUserControl;
 
@@ -20,14 +20,13 @@ namespace Hitomi_Viewer
         public static Viewer.Views.PageViewerUserControl PageViewerUserControl;
 
         // preferences
-        public static Preferences.Views.PreferencesPage PreferencesPage;
+        //public static Preferences.Views.PreferencesPage PreferencesPage;
 
         // etc
 		public static Services.JsonParser JsonParser;
 
         public App()
         {
-            BrowserPage = new BrowserPage();
             ListBrowserUserControl = new ListBrowserUserControl();
             TileBrowserUserControl = new TileBrowserUserControl();
 
@@ -35,7 +34,7 @@ namespace Hitomi_Viewer
             ScrollViewerUserControl = new ScrollViewerUserControl();
             PageViewerUserControl = new PageViewerUserControl();
 
-            PreferencesPage = new Preferences.Views.PreferencesPage();
+            //PreferencesPage = new Preferences.Views.PreferencesPage();
 			JsonParser = new Services.JsonParser();
         }
 

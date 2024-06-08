@@ -19,10 +19,17 @@ namespace Hitomi_Viewer.Cores.CustomControls
     /// </summary>
     public partial class PreviewWindow : Window
     {
+        BitmapSource Preview1 { get; set; }
+        BitmapSource Preview2 { get; set; }
+        BitmapSource Preview3 { get; set; }
+        BitmapSource Preview4 { get; set; }
+
         public PreviewWindow()
         {
             InitializeComponent();
             Visibility = Visibility.Hidden;
+
+
         }
     }
 }

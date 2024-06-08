@@ -38,12 +38,13 @@ namespace Hitomi_Viewer.Cores.CustomControls
         private void Grid_MouseEnter(object sender, MouseEventArgs e)
         {
             mPreviewWindow.Visibility = Visibility.Visible;
-            mPreviewWindow.DragMove();
+            mPreviewWindow.Top = 1;
+            //mPreviewWindow.DragMove();
         }
 
         private void Grid_MouseLeave(object sender, MouseEventArgs e)
         {
-            mPreviewWindow.Visibility = Visibility.Visible;
+            mPreviewWindow.Visibility = Visibility.Hidden;
         }
     }
 }

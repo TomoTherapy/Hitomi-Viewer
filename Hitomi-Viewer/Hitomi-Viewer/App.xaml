@@ -4,10 +4,13 @@
              xmlns:local="clr-namespace:Hitomi_Viewer"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!--<Style TargetType="TextBlock" x:Key="TileViewTextStyle">
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="Foreground" Value="#FF212121"/>
-        </Style>-->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/ResourceDics/ControlStyles.xaml"/>
+                <ResourceDictionary Source="Resources/ResourceDics/NaviButtonTemplate.xaml"/>
+                <ResourceDictionary Source="Resources/ResourceDics/DarkTheme.xaml"/>
+                <ResourceDictionary Source="Resources/ResourceDics/LightTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

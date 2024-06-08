@@ -14,13 +14,15 @@
                 <RowDefinition Height="25"/>
                 <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
-            <Grid >
+            
+            <Grid>
                 <Grid.Clip>
                     <!-- RectangleGeometry to clip the content of the Grid -->
                     <RectangleGeometry Rect="0,0,198,300" RadiusX="5" RadiusY="5"/>
                 </Grid.Clip>
                 <Image Name="Cover_Image" RenderOptions.BitmapScalingMode="HighQuality" Source="/Resources/SampleImages/01.jpg" Stretch="UniformToFill" />
             </Grid>
+            <Border BorderBrush="Gray" BorderThickness="0,0,0,1"/>
             <TextBlock Name="Title_TextBlock" Text="TITLE" Grid.Row="1"  ToolTip="TITLE"/>
             <TextBlock Name="Author_TextBlock" Text="AUTHOR" Grid.Row="2"  ToolTip="TITLE"/>
             <StackPanel Orientation="Horizontal" Grid.Row="3">
